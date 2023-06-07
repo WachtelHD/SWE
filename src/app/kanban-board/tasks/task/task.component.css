@@ -1,0 +1,20 @@
+
+.button{
+  position: relative;
+  right: 0;
+  margin: 0.2rem;
+}
+
+.actions{
+  width: 100%;
+  display: contents;
+  position: absolute;
+  right: 0;
+}
+
+.panel{
+  min-width: 10rem;
+  overflow: hidden;
+  text-overflow-ellipsis: true;
+  word-break: break-word;
+}

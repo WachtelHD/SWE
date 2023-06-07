@@ -1,0 +1,16 @@
+<mat-card class="outline">
+  <h2>{{name}}</h2>
+  <button mat-fab color="primary" class="addButton" (click)="addNewTask()"><mat-icon>add</mat-icon></button>
+  <div
+    cdkDropList
+    [id]="id"
+    [cdkDropListData]="tasks"
+    [cdkDropListConnectedTo]="dragDropService.listIds"
+    class="list"
+    (cdkDropListDropped)="dragDropService.onDragDrop($event)">
+    <mat-card cdkDrag *ngFor="let task of tasks, let i = index" class="box">
+      <app-task [taskFormGroup]="task" [dragging]="false" (delete)="removeTask(i)"></app-task>
+      <app-task *cdkDragPreview [taskFormGroup]="task" [dragging]="true"></app-task>
+    </mat-card>
+  </div>
+</mat-card>

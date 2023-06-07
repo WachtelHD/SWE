@@ -1,0 +1,10 @@
+<mat-card class="outline">
+  <h1 class="header">{{name}}</h1>
+  <div class="layout">
+    <app-tasks
+      *ngFor="let board of boards"
+      [name]="board?.name"
+      [tasks]="board?.data"
+    ></app-tasks>
+  </div>
+</mat-card>

@@ -1,0 +1,16 @@
+<h1 mat-dialog-title class="header">Edit Task</h1>
+<form mat-dialog-content [formGroup]="taskForm" class="content">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <textarea matInput cdkTextareaAutosize maxlength="100" formControlName="name"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <textarea matInput cdkTextareaAutosize formControlName="description"></textarea>
+  </mat-form-field>
+<!--  Add sub Tasks?-->
+</form>
+<div mat-dialog-actions class="actions">
+  <button mat-raised-button (click)="submit()">Submit</button>
+  <button mat-raised-button (click)="close()">Discard</button>
+</div>
